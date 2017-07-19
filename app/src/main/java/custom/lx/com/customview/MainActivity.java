@@ -1,5 +1,6 @@
 package custom.lx.com.customview;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
@@ -18,6 +19,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import custom.lx.com.customview.beans.HomeBean;
+import custom.lx.com.customview.recyclerview.RecyclerMainActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,6 +41,14 @@ public class MainActivity extends AppCompatActivity {
         View top = getLayoutInflater().inflate(R.layout.top_view, (ViewGroup) rvList.getParent(), false);
         homeAdapter.addHeaderView(top);
         rvList.setAdapter(homeAdapter);
+
+        homeAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                Intent intent = new Intent(MainActivity.this, RecyclerMainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initData() {

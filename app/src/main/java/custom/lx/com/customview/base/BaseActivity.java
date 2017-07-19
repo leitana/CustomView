@@ -53,6 +53,12 @@ public class BaseActivity extends AppCompatActivity{
         title = (TextView) findViewById(R.id.title);
     }
 
+    protected void setTitle(String msg) {
+        if (title != null) {
+            title.setText(msg);
+        }
+    }
+
     protected void setBackBtn() {
         if (back != null) {
             back.setVisibility(View.VISIBLE);
