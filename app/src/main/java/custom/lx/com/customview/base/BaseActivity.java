@@ -26,6 +26,7 @@ public class BaseActivity extends AppCompatActivity{
     private LinearLayout rootLayout;
     private TextView title;
     private ImageView back;
+    private LinearLayout right;
     protected final String TAG = this.getClass().getSimpleName();
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -51,6 +52,7 @@ public class BaseActivity extends AppCompatActivity{
         }
         back = (ImageView) findViewById(R.id.iv_back);
         title = (TextView) findViewById(R.id.title);
+        right = (LinearLayout) findViewById(R.id.ll_right);
     }
 
     protected void setTitle(String msg) {
@@ -84,6 +86,10 @@ public class BaseActivity extends AppCompatActivity{
             Logger.d("back is null ,please check out");
         }
 
+    }
+
+    protected void addRightView(View view) {
+        right.addView(view);
     }
 
     @Override

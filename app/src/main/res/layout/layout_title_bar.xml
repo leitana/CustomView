@@ -39,5 +39,14 @@
         android:textColor="@color/gray_color"
         android:textSize="12sp"
         />
+    <LinearLayout
+        android:id="@+id/ll_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:layout_marginRight="10dp">
+    </LinearLayout>
 
 </RelativeLayout>
