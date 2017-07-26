@@ -43,7 +43,7 @@ public class NativeRecyclerActicity extends BaseActivity {
         initView();
         setTitle("Native RecyclerView");
         initData();
-        rvList.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
+        rvList.setLayoutManager(new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL));
         rvList.setItemAnimator(new DefaultItemAnimator());//设置动画
         //item分割线
 //        rvList.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
@@ -67,13 +67,12 @@ public class NativeRecyclerActicity extends BaseActivity {
 
     private void initData() {
         mData = new ArrayList<>();
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 50; i++) {
             mData.add("item" + i);
         }
     }
 
     public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
-
         @Override
         public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             View mRootView = LayoutInflater.from(mContext).inflate(R.layout.text_item, parent, false);
