@@ -47,9 +47,16 @@ public class RecyclerMainActivity extends BaseActivity {
         recyclerAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                if (position == 0) {
-                    Intent intent = new Intent(mContext, NativeRecyclerActicity.class);
-                    startActivity(intent);
+                Intent intent = new Intent();
+                switch (position) {
+                    case 0:
+                        intent.setClass(mContext, NativeRecyclerActicity.class);
+                        startActivity(intent);
+                        break;
+                    case 1:
+                        intent.setClass(mContext, RecyclerWithBaseAdapter.class);
+                        startActivity(intent);
+                        break;
                 }
             }
         });
@@ -61,6 +68,10 @@ public class RecyclerMainActivity extends BaseActivity {
         homeBean.setTitle("Native base");
         homeBean.setContent("Native base recycler");
         recyclerList.add(homeBean);
+        HomeBean homeBean1 = new HomeBean();
+        homeBean1.setTitle("RecyclerView With BaseAdapter");
+        homeBean1.setContent("RecyclerView With BaseAdapter");
+        recyclerList.add(homeBean1);
     }
 
     public class RecyclerAdapter extends BaseQuickAdapter<HomeBean, BaseViewHolder>{

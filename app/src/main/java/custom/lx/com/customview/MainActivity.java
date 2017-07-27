@@ -45,8 +45,15 @@ public class MainActivity extends AppCompatActivity {
         homeAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                Intent intent = new Intent(MainActivity.this, RecyclerMainActivity.class);
-                startActivity(intent);
+                Intent intent = new Intent();
+                switch (position){
+                    case 0:
+                        intent.setClass(MainActivity.this, RecyclerMainActivity.class);
+                        startActivity(intent);
+                        break;
+                    default:
+                        break;
+                }
             }
         });
     }

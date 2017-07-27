@@ -30,6 +30,12 @@ public class ViewHolder extends RecyclerView.ViewHolder{
         return holder;
     }
 
+    public ViewHolder setOnClickListener(int viewId, View.OnClickListener listener) {
+        View view = getView(viewId);
+        view.setOnClickListener(listener);
+        return this;
+    }
+
     public <T extends View> T getView(int viewId) {
         View view = mViews.get(viewId);
         if (view == null) {
@@ -37,5 +43,9 @@ public class ViewHolder extends RecyclerView.ViewHolder{
             mViews.put(viewId, view);
         }
         return (T) view;
+    }
+
+    public View getConvertView() {
+        return mConvertView;
     }
 }

@@ -3,6 +3,7 @@ package custom.lx.com.customview.base;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.List;
@@ -16,6 +17,11 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<ViewHo
     protected int mLayoutId;
     protected List<T> mDatas;
     protected LayoutInflater mInflater;
+    protected OnItemClickListener onItemClickListener;
+
+    public interface OnItemClickListener{
+        void onItemClick(View view, RecyclerView.ViewHolder viewHolder, int position);
+    }
 
     public BaseRecyclerAdapter(Context context, int layoutId, List<T> datas) {
         mContext = context;
@@ -27,6 +33,7 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<ViewHo
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         ViewHolder viewHolder = ViewHolder.get(mContext, parent, mLayoutId);
+        setClickListener(viewHolder);
         return viewHolder;
     }
 
@@ -41,4 +48,18 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<ViewHo
     }
 
     public abstract void convert(ViewHolder holder, T t);
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener){
+        this.onItemClickListener = onItemClickListener;
+    }
+
+    protected void setClickListener(final ViewHolder viewHolder) {
+        viewHolder.getConvertView().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int position = viewHolder.getAdapterPosition();
+                onItemClickListener.onItemClick(v, viewHolder, position);
+            }
+        });
+    }
 }
