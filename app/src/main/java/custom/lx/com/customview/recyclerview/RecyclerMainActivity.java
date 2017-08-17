@@ -57,6 +57,10 @@ public class RecyclerMainActivity extends BaseActivity {
                         intent.setClass(mContext, RecyclerWithBaseAdapter.class);
                         startActivity(intent);
                         break;
+                    case 2:
+                        intent.setClass(mContext, XRecyclerViewActivity.class);
+                        startActivity(intent);
+                        break;
                 }
             }
         });
@@ -68,10 +72,16 @@ public class RecyclerMainActivity extends BaseActivity {
         homeBean.setTitle("Native base");
         homeBean.setContent("Native base recycler");
         recyclerList.add(homeBean);
+
         HomeBean homeBean1 = new HomeBean();
         homeBean1.setTitle("RecyclerView With BaseAdapter");
         homeBean1.setContent("RecyclerView With BaseAdapter");
         recyclerList.add(homeBean1);
+
+        HomeBean homeBean2 = new HomeBean();
+        homeBean2.setTitle("RecyclerView With XRecyclerView");
+        homeBean2.setContent("RecyclerView With XRecyclerView");
+        recyclerList.add(homeBean2);
     }
 
     public class RecyclerAdapter extends BaseQuickAdapter<HomeBean, BaseViewHolder>{

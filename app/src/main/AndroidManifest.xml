@@ -19,6 +19,7 @@
         <activity android:name=".recyclerview.RecyclerMainActivity" />
         <activity android:name=".recyclerview.NativeRecyclerActicity" />
         <activity android:name=".recyclerview.RecyclerWithBaseAdapter" />
+        <activity android:name=".recyclerview.XRecyclerViewActivity" />
     </application>
 
 </manifest>
