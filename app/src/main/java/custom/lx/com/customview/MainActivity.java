@@ -18,6 +18,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import custom.lx.com.customview.animation.AnimationMainActivity;
 import custom.lx.com.customview.beans.HomeBean;
 import custom.lx.com.customview.recyclerview.RecyclerMainActivity;
 
@@ -51,6 +52,10 @@ public class MainActivity extends AppCompatActivity {
                         intent.setClass(MainActivity.this, RecyclerMainActivity.class);
                         startActivity(intent);
                         break;
+                    case 1:
+                        intent.setClass(MainActivity.this, AnimationMainActivity.class);
+                        startActivity(intent);
+                        break;
                     default:
                         break;
                 }
@@ -63,9 +68,12 @@ public class MainActivity extends AppCompatActivity {
         HomeBean recyclerView = new HomeBean();
         recyclerView.setTitle("RecyclerView Demo");
         recyclerView.setContent("RecyclerView Demos With BRVAH");
-        for (int i = 0; i < 50; i++) {
-            homeBeanList.add(recyclerView);
-        }
+        homeBeanList.add(recyclerView);
+
+        HomeBean animation = new HomeBean();
+        animation.setTitle("Android Animation");
+        animation.setContent("Three Types Of Animation For Android");
+        homeBeanList.add(animation);
     }
 
     public class HomeAdapter extends BaseQuickAdapter<HomeBean, BaseViewHolder>{

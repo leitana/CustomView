@@ -58,7 +58,9 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<ViewHo
             @Override
             public void onClick(View v) {
                 int position = viewHolder.getAdapterPosition();
-                onItemClickListener.onItemClick(v, viewHolder, position);
+                if (onItemClickListener != null) {
+                    onItemClickListener.onItemClick(v, viewHolder, position);
+                }
             }
         });
     }

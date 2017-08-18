@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <!-- android：oneshot="false" ，
+    这个oneshot 的含义就是动画执行一次（true）
+    还是循环执行多次。 -->
+    <item
+        android:drawable="@mipmap/commonui_spinner_0"
+        android:duration="60"/>
+    <item
+        android:drawable="@mipmap/commonui_spinner_1"
+        android:duration="60"/>
+    <item
+        android:drawable="@mipmap/commonui_spinner_2"
+        android:duration="60"/>
+    <item
+        android:drawable="@mipmap/commonui_spinner_3"
+        android:duration="60"/>
+    <item
+        android:drawable="@mipmap/commonui_spinner_4"
+        android:duration="60"/>
+    <item
+        android:drawable="@mipmap/commonui_spinner_5"
+        android:duration="60"/>
+    <item
+        android:drawable="@mipmap/commonui_spinner_6"
+        android:duration="60"/>
+    <item
+        android:drawable="@mipmap/commonui_spinner_7"
+        android:duration="60"/>
+    <item
+        android:drawable="@mipmap/commonui_spinner_8"
+        android:duration="60"/>
+    <item
+        android:drawable="@mipmap/commonui_spinner_9"
+        android:duration="60"/>
+    <item
+        android:drawable="@mipmap/commonui_spinner_10"
+        android:duration="60"/>
+    <item
+        android:drawable="@mipmap/commonui_spinner_11"
+        android:duration="60"/>
+</animation-list>
