@@ -22,6 +22,7 @@
         <activity android:name=".recyclerview.XRecyclerViewActivity" />
         <activity android:name=".animation.AnimationMainActivity" />
         <activity android:name=".animation.FrameAnimationActivity" />
+        <activity android:name=".animation.TweenAnimationActivity" />
     </application>
 
 </manifest>

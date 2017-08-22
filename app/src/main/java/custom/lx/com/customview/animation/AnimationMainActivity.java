@@ -53,6 +53,10 @@ public class AnimationMainActivity extends BaseActivity {
                         intent.setClass(AnimationMainActivity.this, FrameAnimationActivity.class);
                         startActivity(intent);
                         break;
+                    case 1:
+                        intent.setClass(AnimationMainActivity.this, TweenAnimationActivity.class);
+                        startActivity(intent);
+                        break;
                     default:
                         break;
                 }
@@ -70,8 +74,13 @@ public class AnimationMainActivity extends BaseActivity {
 
         HomeBean tweened = new HomeBean();
         tweened.setTitle("Tweened Animation");
-        tweened.setContent("属性动画");
+        tweened.setContent("补间动画");
         homeBeanList.add(tweened);
+
+        HomeBean property = new HomeBean();
+        property.setTitle("Property Animation");
+        property.setContent("属性动画");
+        homeBeanList.add(property);
     }
 
     public class MyAdapter extends BaseRecyclerAdapter<HomeBean>{
