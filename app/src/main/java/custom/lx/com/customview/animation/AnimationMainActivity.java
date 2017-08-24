@@ -57,6 +57,10 @@ public class AnimationMainActivity extends BaseActivity {
                         intent.setClass(AnimationMainActivity.this, TweenAnimationActivity.class);
                         startActivity(intent);
                         break;
+                    case 2:
+                        intent.setClass(AnimationMainActivity.this, PropertyAnimationActivity.class);
+                        startActivity(intent);
+                        break;
                     default:
                         break;
                 }
