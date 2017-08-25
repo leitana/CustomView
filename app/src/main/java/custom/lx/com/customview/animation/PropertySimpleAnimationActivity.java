@@ -19,7 +19,7 @@ import custom.lx.com.customview.base.BaseActivity;
  * Created by 11300 on 2017/8/24.
  */
 
-public class PropertyAnimationActivity extends BaseActivity {
+public class PropertySimpleAnimationActivity extends BaseActivity {
     @BindView(R.id.bt_alpha)
     Button btAlpha;
     @BindView(R.id.bt_scale)
@@ -79,7 +79,7 @@ public class PropertyAnimationActivity extends BaseActivity {
                 /**
                  * xml
                  */
-                Animator animator = AnimatorInflater.loadAnimator(PropertyAnimationActivity.this, R.animator.anim_set);
+                Animator animator = AnimatorInflater.loadAnimator(PropertySimpleAnimationActivity.this, R.animator.anim_set);
                 animator.setTarget(ivWheel);
                 animator.start();
                 break;

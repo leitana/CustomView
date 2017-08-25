@@ -58,7 +58,11 @@ public class AnimationMainActivity extends BaseActivity {
                         startActivity(intent);
                         break;
                     case 2:
-                        intent.setClass(AnimationMainActivity.this, PropertyAnimationActivity.class);
+                        intent.setClass(AnimationMainActivity.this, PropertySimpleAnimationActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 3:
+                        intent.setClass(AnimationMainActivity.this, PropertyViewAnimation.class);
                         startActivity(intent);
                         break;
                     default:
@@ -85,6 +89,11 @@ public class AnimationMainActivity extends BaseActivity {
         property.setTitle("Property Animation");
         property.setContent("属性动画");
         homeBeanList.add(property);
+
+        HomeBean property2 = new HomeBean();
+        property2.setTitle("Property Animation CustomView");
+        property2.setContent("属性动画");
+        homeBeanList.add(property2);
     }
 
     public class MyAdapter extends BaseRecyclerAdapter<HomeBean>{
