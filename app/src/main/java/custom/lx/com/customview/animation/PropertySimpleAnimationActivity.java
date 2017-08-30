@@ -45,9 +45,11 @@ public class PropertySimpleAnimationActivity extends BaseActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.bt_alpha:
-                ObjectAnimator alphaAnimator = ObjectAnimator.ofFloat(ivWheel, "alpha", 1f, 0f, 1f);
-                alphaAnimator.setDuration(5000);
-                alphaAnimator.start();
+//                ObjectAnimator alphaAnimator = ObjectAnimator.ofFloat(ivWheel, "alpha", 1f, 0f, 1f);
+//                alphaAnimator.setDuration(5000);
+//                alphaAnimator.start();
+
+                ivWheel.animate().alpha(0f).setDuration(2500);
                 break;
             case R.id.bt_scale:
                 ObjectAnimator scaleAnimator = ObjectAnimator.ofFloat(ivWheel, "scaleY", 1f, 3f, 1f);
