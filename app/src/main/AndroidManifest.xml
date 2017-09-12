@@ -25,6 +25,7 @@
         <activity android:name=".animation.TweenAnimationActivity" />
         <activity android:name=".animation.PropertySimpleAnimationActivity" />
         <activity android:name=".animation.PropertyViewAnimation" />
+        <activity android:name=".recyclerview.TkrefreshActivity" />
     </application>
 
 </manifest>
