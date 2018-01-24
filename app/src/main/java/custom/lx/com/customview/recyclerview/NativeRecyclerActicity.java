@@ -67,7 +67,7 @@ public class NativeRecyclerActicity extends BaseActivity {
 
     private void initData() {
         mData = new ArrayList<>();
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 20; i++) {
             mData.add("item" + i);
         }
     }
