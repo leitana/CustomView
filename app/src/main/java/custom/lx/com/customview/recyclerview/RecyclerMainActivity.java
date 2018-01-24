@@ -11,6 +11,7 @@ import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+import com.tencent.bugly.crashreport.CrashReport;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +41,7 @@ public class RecyclerMainActivity extends BaseActivity {
         ButterKnife.bind(this);
         setBackBtn();
         setTitle("RecyclerView Samples");
+//        CrashReport.testJavaCrash();
         initData();
         rvList.setLayoutManager(new LinearLayoutManager(this));
         recyclerAdapter = new RecyclerAdapter(R.layout.list_item, recyclerList);
