@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom|right">
+
+    <Button
+        android:id="@+id/menu1"
+        android:layout_height="45dp"
+        android:layout_width="45dp"
+        android:layout_gravity="right|bottom"
+        android:background="@mipmap/cucumber"
+        android:visibility="gone"/>
+    <Button
+        android:id="@+id/menu2"
+        android:layout_height="45dp"
+        android:layout_width="45dp"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:layout_gravity="right|bottom"
+        android:background="@mipmap/apple" />
+    <Button
+        android:id="@+id/menu3"
+        android:layout_height="45dp"
+        android:layout_width="45dp"
+        android:visibility="gone"
+        android:layout_gravity="right|bottom"
+        android:background="@mipmap/kiwi" />
+    <Button
+        android:id="@+id/menu4"
+        android:layout_height="45dp"
+        android:layout_width="45dp"
+        android:visibility="gone"
+        android:layout_gravity="right|bottom"
+        android:background="@mipmap/pear" />
+    <Button
+        android:id="@+id/menu5"
+        android:layout_height="45dp"
+        android:layout_width="45dp"
+        android:visibility="gone"
+        android:layout_gravity="right|bottom"
+        android:background="@mipmap/watermelon" />
+    <Button
+        android:id="@+id/bt_menu"
+        android:layout_height="50dp"
+        android:layout_width="50dp"
+        android:layout_gravity="right|bottom"
+        android:background="@mipmap/apple" />
+</RelativeLayout>

@@ -9,6 +9,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
@@ -19,7 +20,12 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import custom.lx.com.customview.animation.AnimationMainActivity;
+import custom.lx.com.customview.animation.FloatingAnimatorActivity;
+import custom.lx.com.customview.animation.viewgroupanimation.ViewGroupActivity;
 import custom.lx.com.customview.beans.HomeBean;
+import custom.lx.com.customview.custom_view.CustomViewTestActivity;
+import custom.lx.com.customview.custom_view.ScrollRulerViewActivity;
+import custom.lx.com.customview.path.PathMeasureActivity;
 import custom.lx.com.customview.recyclerview.RecyclerMainActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -56,6 +62,24 @@ public class MainActivity extends AppCompatActivity {
                         intent.setClass(MainActivity.this, AnimationMainActivity.class);
                         startActivity(intent);
                         break;
+                    case 2:
+                        intent.setClass(MainActivity.this, FloatingAnimatorActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 3:
+                        intent.setClass(MainActivity.this, CustomViewTestActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 4:
+                        intent.setClass(MainActivity.this, ViewGroupActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 5:
+                        intent.setClass(MainActivity.this, PathMeasureActivity.class);
+                        startActivity(intent);
+                    case 6:
+                        intent.setClass(MainActivity.this, ScrollRulerViewActivity.class);
+                        startActivity(intent);
                     default:
                         break;
                 }
@@ -74,6 +98,31 @@ public class MainActivity extends AppCompatActivity {
         animation.setTitle("Android Animation");
         animation.setContent("Three Types Of Animation For Android");
         homeBeanList.add(animation);
+
+        HomeBean animatorSet = new HomeBean();
+        animatorSet.setTitle("属性动画学习------FloatingButton");
+        animatorSet.setContent("AnimatorSet");
+        homeBeanList.add(animatorSet);
+
+        HomeBean custom = new HomeBean();
+        custom.setTitle("自定义View");
+        custom.setContent("自定义View测试");
+        homeBeanList.add(custom);
+
+        HomeBean animateLayoutChanges = new HomeBean();
+        animateLayoutChanges.setTitle("animateLayoutChanges");
+        animateLayoutChanges.setContent("ViewGroup中的动画");
+        homeBeanList.add(animateLayoutChanges);
+
+        HomeBean pathMeasure = new HomeBean();
+        pathMeasure.setTitle("PathMeasure");
+        pathMeasure.setContent("PathMeasure实现路径动画");
+        homeBeanList.add(pathMeasure);
+
+        HomeBean scrollRuler = new HomeBean();
+        scrollRuler.setTitle("scrollRuler");
+        scrollRuler.setContent("可滑动刻度尺自定义View");
+        homeBeanList.add(scrollRuler);
     }
 
     public class HomeAdapter extends BaseQuickAdapter<HomeBean, BaseViewHolder>{

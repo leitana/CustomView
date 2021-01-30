@@ -41,6 +41,10 @@ public class RecyclerMainActivity extends BaseActivity {
         ButterKnife.bind(this);
         setBackBtn();
         setTitle("RecyclerView Samples");
+
+
+
+
 //        CrashReport.testJavaCrash();
         initData();
         rvList.setLayoutManager(new LinearLayoutManager(this));
