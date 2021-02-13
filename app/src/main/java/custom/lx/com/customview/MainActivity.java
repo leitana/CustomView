@@ -27,6 +27,7 @@ import custom.lx.com.customview.custom_view.CustomViewTestActivity;
 import custom.lx.com.customview.custom_view.ScrollRulerViewActivity;
 import custom.lx.com.customview.path.PathMeasureActivity;
 import custom.lx.com.customview.recyclerview.RecyclerMainActivity;
+import custom.lx.com.customview.svg.SvgTestActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -77,9 +78,15 @@ public class MainActivity extends AppCompatActivity {
                     case 5:
                         intent.setClass(MainActivity.this, PathMeasureActivity.class);
                         startActivity(intent);
+                        break;
                     case 6:
                         intent.setClass(MainActivity.this, ScrollRulerViewActivity.class);
                         startActivity(intent);
+                        break;
+                    case 7:
+                        intent.setClass(MainActivity.this, SvgTestActivity.class);
+                        startActivity(intent);
+                        break;
                     default:
                         break;
                 }
@@ -123,6 +130,11 @@ public class MainActivity extends AppCompatActivity {
         scrollRuler.setTitle("scrollRuler");
         scrollRuler.setContent("可滑动刻度尺自定义View");
         homeBeanList.add(scrollRuler);
+
+        HomeBean svgTest = new HomeBean();
+        svgTest.setTitle("SVG");
+        svgTest.setContent("svg测试");
+        homeBeanList.add(svgTest);
     }
 
     public class HomeAdapter extends BaseQuickAdapter<HomeBean, BaseViewHolder>{

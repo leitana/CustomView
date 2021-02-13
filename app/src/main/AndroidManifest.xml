@@ -48,6 +48,7 @@
         <activity android:name=".animation.viewgroupanimation.ViewGroupActivity" />
         <activity android:name=".path.PathMeasureActivity"/>
         <activity android:name=".custom_view.ScrollRulerViewActivity"/>
+        <activity android:name=".svg.SvgTestActivity"/>
     </application>
 
 </manifest>
