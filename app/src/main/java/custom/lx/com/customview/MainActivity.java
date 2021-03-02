@@ -23,7 +23,10 @@ import custom.lx.com.customview.animation.AnimationMainActivity;
 import custom.lx.com.customview.animation.FloatingAnimatorActivity;
 import custom.lx.com.customview.animation.viewgroupanimation.ViewGroupActivity;
 import custom.lx.com.customview.beans.HomeBean;
+import custom.lx.com.customview.custom_view.BezierActivity;
+import custom.lx.com.customview.custom_view.BezierGestureTrackActivity;
 import custom.lx.com.customview.custom_view.CustomViewTestActivity;
+import custom.lx.com.customview.custom_view.NormalGestureTrackActivity;
 import custom.lx.com.customview.custom_view.ScrollRulerViewActivity;
 import custom.lx.com.customview.path.PathMeasureActivity;
 import custom.lx.com.customview.recyclerview.RecyclerMainActivity;
@@ -87,6 +90,19 @@ public class MainActivity extends AppCompatActivity {
                         intent.setClass(MainActivity.this, SvgTestActivity.class);
                         startActivity(intent);
                         break;
+                    case 8:
+                        intent.setClass(MainActivity.this, BezierActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 9:
+                        intent.setClass(MainActivity.this, NormalGestureTrackActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 10:
+                        intent.setClass(MainActivity.this, BezierGestureTrackActivity.class);
+                        startActivity(intent);
+                        break;
+
                     default:
                         break;
                 }
@@ -135,6 +151,21 @@ public class MainActivity extends AppCompatActivity {
         svgTest.setTitle("SVG");
         svgTest.setContent("svg测试");
         homeBeanList.add(svgTest);
+
+        HomeBean bezier = new HomeBean();
+        bezier.setTitle("贝塞尔曲线");
+        bezier.setContent("贝塞尔曲线学习");
+        homeBeanList.add(bezier);
+
+        HomeBean normalTrack = new HomeBean();
+        normalTrack.setTitle("普通的手势追踪");
+        normalTrack.setContent("普通的手势追踪\n未加贝塞尔曲线");
+        homeBeanList.add(normalTrack);
+
+        HomeBean bezierTrack = new HomeBean();
+        bezierTrack.setTitle("加上贝塞尔曲线的手势追踪");
+        bezierTrack.setContent("手势追踪\n加贝塞尔曲线");
+        homeBeanList.add(bezierTrack);
     }
 
     public class HomeAdapter extends BaseQuickAdapter<HomeBean, BaseViewHolder>{

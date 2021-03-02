@@ -91,7 +91,7 @@ public class ScrollRulerView extends View {
         mLineColor = ta.getColor(R.styleable.ScrollRulerView_line_color, DEFAULT_LINE_COLOR);
         mSmallLineHeight = ta.getDimension(R.styleable.ScrollRulerView_small_line_height, dp2px(5));
         mLongLineHeight = ta.getDimension(R.styleable.ScrollRulerView_long_line_height, dp2px(10));
-        mLineGap = ta.getDimension(R.styleable.ScrollRulerView_line_gap, dp2px(4));
+        mLineGap = ta.getDimension(R.styleable.ScrollRulerView_line_gap, dp2px(10));
         mLineWidth = ta.getDimension(R.styleable.ScrollRulerView_line_width, dp2px(1));
         mScaleTextColor = ta.getColor(R.styleable.ScrollRulerView_scale_text_color, DEFAULT_TEXT_COLOR);
         mScaleTextSize = ta.getDimensionPixelSize(R.styleable.ScrollRulerView_scale_text_size, dp2px(8));
