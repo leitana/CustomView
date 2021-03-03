@@ -9,7 +9,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AnimationUtils;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
@@ -23,8 +22,9 @@ import custom.lx.com.customview.animation.AnimationMainActivity;
 import custom.lx.com.customview.animation.FloatingAnimatorActivity;
 import custom.lx.com.customview.animation.viewgroupanimation.ViewGroupActivity;
 import custom.lx.com.customview.beans.HomeBean;
-import custom.lx.com.customview.custom_view.BezierActivity;
-import custom.lx.com.customview.custom_view.BezierGestureTrackActivity;
+import custom.lx.com.customview.bezier.AnimWaveActivity;
+import custom.lx.com.customview.bezier.BezierActivity;
+import custom.lx.com.customview.bezier.BezierGestureTrackActivity;
 import custom.lx.com.customview.custom_view.CustomViewTestActivity;
 import custom.lx.com.customview.custom_view.NormalGestureTrackActivity;
 import custom.lx.com.customview.custom_view.ScrollRulerViewActivity;
@@ -103,6 +103,11 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
 
+                    case 11:
+                        intent.setClass(MainActivity.this, AnimWaveActivity.class);
+                        startActivity(intent);
+                        break;
+
                     default:
                         break;
                 }
@@ -166,6 +171,11 @@ public class MainActivity extends AppCompatActivity {
         bezierTrack.setTitle("加上贝塞尔曲线的手势追踪");
         bezierTrack.setContent("手势追踪\n加贝塞尔曲线");
         homeBeanList.add(bezierTrack);
+
+        HomeBean animWave = new HomeBean();
+        animWave.setTitle("贝塞尔曲线实现波浪动画");
+        animWave.setContent("贝塞尔曲线实现波浪动画");
+        homeBeanList.add(animWave);
     }
 
     public class HomeAdapter extends BaseQuickAdapter<HomeBean, BaseViewHolder>{

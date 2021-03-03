@@ -1,4 +1,4 @@
-package custom.lx.com.customview.custom_view;
+package custom.lx.com.customview.bezier;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,15 +8,15 @@ import custom.lx.com.customview.R;
 
 /**
  * @author linxiao
- * @title：NormalGestureTrackActivity
+ * @title：AnimWaveActivity
  * @projectName CustomView
  * @description: <Description>
- * @data Created in 2021/03/02
+ * @data Created in 2021/03/03
  */
-public class BezierGestureTrackActivity extends AppCompatActivity {
+public class AnimWaveActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bezier_gesture_track);
+        setContentView(R.layout.activity_anim_wave);
     }
 }

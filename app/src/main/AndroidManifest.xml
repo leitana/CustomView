@@ -49,9 +49,10 @@
         <activity android:name=".path.PathMeasureActivity"/>
         <activity android:name=".custom_view.ScrollRulerViewActivity"/>
         <activity android:name=".svg.SvgTestActivity"/>
-        <activity android:name=".custom_view.BezierActivity"/>
+        <activity android:name=".bezier.BezierActivity"/>
         <activity android:name=".custom_view.NormalGestureTrackActivity"/>
-        <activity android:name=".custom_view.BezierGestureTrackActivity" />
+        <activity android:name=".bezier.BezierGestureTrackActivity" />
+        <activity android:name=".bezier.AnimWaveActivity" />
     </application>
 
 </manifest>

@@ -159,3 +159,4 @@ lint/outputs/
 lint/tmp/
 # lint/reports/
 
+app/src/main/res/drawable-v21/

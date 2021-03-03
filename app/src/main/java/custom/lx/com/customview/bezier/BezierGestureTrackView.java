@@ -1,4 +1,4 @@
-package custom.lx.com.customview.custom_view;
+package custom.lx.com.customview.bezier;
 
 import android.content.Context;
 import android.graphics.Canvas;
