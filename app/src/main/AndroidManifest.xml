@@ -53,6 +53,8 @@
         <activity android:name=".custom_view.NormalGestureTrackActivity"/>
         <activity android:name=".bezier.BezierGestureTrackActivity" />
         <activity android:name=".bezier.AnimWaveActivity" />
+        <activity android:name=".shader.BitmapShaderActivity" />
+        <activity android:name=".shader.AvatorActivity"/>
     </application>
 
 </manifest>

@@ -30,6 +30,8 @@ import custom.lx.com.customview.custom_view.NormalGestureTrackActivity;
 import custom.lx.com.customview.custom_view.ScrollRulerViewActivity;
 import custom.lx.com.customview.path.PathMeasureActivity;
 import custom.lx.com.customview.recyclerview.RecyclerMainActivity;
+import custom.lx.com.customview.shader.AvatorActivity;
+import custom.lx.com.customview.shader.BitmapShaderActivity;
 import custom.lx.com.customview.svg.SvgTestActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -108,6 +110,14 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
 
+                    case 12:
+                        intent.setClass(MainActivity.this, BitmapShaderActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 13:
+                        intent.setClass(MainActivity.this, AvatorActivity.class);
+                        startActivity(intent);
+                        break;
                     default:
                         break;
                 }
@@ -176,6 +186,16 @@ public class MainActivity extends AppCompatActivity {
         animWave.setTitle("贝塞尔曲线实现波浪动画");
         animWave.setContent("贝塞尔曲线实现波浪动画");
         homeBeanList.add(animWave);
+
+        HomeBean bitmapShader = new HomeBean();
+        bitmapShader.setTitle("Shader");
+        bitmapShader.setContent("绘图进阶Shader,BitmapShader\n实现望远镜效果");
+        homeBeanList.add(bitmapShader);
+
+        HomeBean avator = new HomeBean();
+        avator.setTitle("Shader");
+        avator.setContent("绘图进阶Shader,BitmapShader\n实现不规则头像");
+        homeBeanList.add(avator);
     }
 
     public class HomeAdapter extends BaseQuickAdapter<HomeBean, BaseViewHolder>{
