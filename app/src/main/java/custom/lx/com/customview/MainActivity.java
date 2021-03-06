@@ -32,6 +32,9 @@ import custom.lx.com.customview.path.PathMeasureActivity;
 import custom.lx.com.customview.recyclerview.RecyclerMainActivity;
 import custom.lx.com.customview.shader.AvatorActivity;
 import custom.lx.com.customview.shader.BitmapShaderActivity;
+import custom.lx.com.customview.shape.MagnifierActivity;
+import custom.lx.com.customview.shape.MagnifierView;
+import custom.lx.com.customview.shape.ShapeInstanceActivity;
 import custom.lx.com.customview.svg.SvgTestActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -118,6 +121,16 @@ public class MainActivity extends AppCompatActivity {
                         intent.setClass(MainActivity.this, AvatorActivity.class);
                         startActivity(intent);
                         break;
+
+                    case 14:
+                        intent.setClass(MainActivity.this, ShapeInstanceActivity.class);
+                        startActivity(intent);
+                        break;
+
+                    case 15:
+                        intent.setClass(MainActivity.this, MagnifierActivity.class);
+                        startActivity(intent);
+                        break;
                     default:
                         break;
                 }
@@ -196,6 +209,16 @@ public class MainActivity extends AppCompatActivity {
         avator.setTitle("Shader");
         avator.setContent("绘图进阶Shader,BitmapShader\n实现不规则头像");
         homeBeanList.add(avator);
+
+        HomeBean shape = new HomeBean();
+        shape.setTitle("shape");
+        shape.setContent("GradientDrawable");
+        homeBeanList.add(shape);
+
+        HomeBean magnifer = new HomeBean();
+        magnifer.setTitle("ShapeDrawable");
+        magnifer.setContent("ShapeDrawable实现放大镜");
+        homeBeanList.add(magnifer);
     }
 
     public class HomeAdapter extends BaseQuickAdapter<HomeBean, BaseViewHolder>{

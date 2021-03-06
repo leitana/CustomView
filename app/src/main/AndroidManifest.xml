@@ -55,6 +55,8 @@
         <activity android:name=".bezier.AnimWaveActivity" />
         <activity android:name=".shader.BitmapShaderActivity" />
         <activity android:name=".shader.AvatorActivity"/>
+        <activity android:name=".shape.ShapeInstanceActivity" />
+        <activity android:name=".shape.MagnifierActivity"/>
     </application>
 
 </manifest>
