@@ -57,6 +57,7 @@
         <activity android:name=".shader.AvatorActivity"/>
         <activity android:name=".shape.ShapeInstanceActivity" />
         <activity android:name=".shape.MagnifierActivity"/>
+        <activity android:name=".bitmap.WaterMarkActivity" />
     </application>
 
 </manifest>

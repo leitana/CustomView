@@ -25,6 +25,7 @@ import custom.lx.com.customview.beans.HomeBean;
 import custom.lx.com.customview.bezier.AnimWaveActivity;
 import custom.lx.com.customview.bezier.BezierActivity;
 import custom.lx.com.customview.bezier.BezierGestureTrackActivity;
+import custom.lx.com.customview.bitmap.WaterMarkActivity;
 import custom.lx.com.customview.custom_view.CustomViewTestActivity;
 import custom.lx.com.customview.custom_view.NormalGestureTrackActivity;
 import custom.lx.com.customview.custom_view.ScrollRulerViewActivity;
@@ -131,6 +132,11 @@ public class MainActivity extends AppCompatActivity {
                         intent.setClass(MainActivity.this, MagnifierActivity.class);
                         startActivity(intent);
                         break;
+
+                    case 16:
+                        intent.setClass(MainActivity.this, WaterMarkActivity.class);
+                        startActivity(intent);
+                        break;
                     default:
                         break;
                 }
@@ -219,6 +225,11 @@ public class MainActivity extends AppCompatActivity {
         magnifer.setTitle("ShapeDrawable");
         magnifer.setContent("ShapeDrawable实现放大镜");
         homeBeanList.add(magnifer);
+
+        HomeBean waterMark = new HomeBean();
+        waterMark.setTitle("Bitmap");
+        waterMark.setContent("Bitmap实现水印");
+        homeBeanList.add(waterMark);
     }
 
     public class HomeAdapter extends BaseQuickAdapter<HomeBean, BaseViewHolder>{
