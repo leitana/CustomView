@@ -36,6 +36,7 @@ import custom.lx.com.customview.shader.BitmapShaderActivity;
 import custom.lx.com.customview.shape.MagnifierActivity;
 import custom.lx.com.customview.shape.MagnifierView;
 import custom.lx.com.customview.shape.ShapeInstanceActivity;
+import custom.lx.com.customview.surfaceview.SurfaceViewActivity;
 import custom.lx.com.customview.svg.SvgTestActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -137,6 +138,11 @@ public class MainActivity extends AppCompatActivity {
                         intent.setClass(MainActivity.this, WaterMarkActivity.class);
                         startActivity(intent);
                         break;
+
+                    case 17:
+                        intent.setClass(MainActivity.this, SurfaceViewActivity.class);
+                        startActivity(intent);
+                        break;
                     default:
                         break;
                 }
@@ -230,6 +236,11 @@ public class MainActivity extends AppCompatActivity {
         waterMark.setTitle("Bitmap");
         waterMark.setContent("Bitmap实现水印");
         homeBeanList.add(waterMark);
+
+        HomeBean surfaceView = new HomeBean();
+        surfaceView.setTitle("SurfaceView");
+        surfaceView.setContent("SurfaceView实现动态Bitmap");
+        homeBeanList.add(surfaceView);
     }
 
     public class HomeAdapter extends BaseQuickAdapter<HomeBean, BaseViewHolder>{

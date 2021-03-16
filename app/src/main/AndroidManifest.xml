@@ -17,13 +17,13 @@
         android:theme="@style/AppTheme">
 
         <!-- 配置APP ID -->
-        <meta-data
-            android:name="BUGLY_APPID"
-            android:value="40cb5aabf3" />
-        <!-- 配置APP版本号 -->
-        <meta-data
-            android:name="BUGLY_APP_VERSION"
-            android:value="1.0" />
+<!--        <meta-data-->
+<!--            android:name="BUGLY_APPID"-->
+<!--            android:value="40cb5aabf3" />-->
+<!--        &lt;!&ndash; 配置APP版本号 &ndash;&gt;-->
+<!--        <meta-data-->
+<!--            android:name="BUGLY_APP_VERSION"-->
+<!--            android:value="1.0" />-->
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -58,6 +58,7 @@
         <activity android:name=".shape.ShapeInstanceActivity" />
         <activity android:name=".shape.MagnifierActivity"/>
         <activity android:name=".bitmap.WaterMarkActivity" />
+        <activity android:name=".surfaceview.SurfaceViewActivity" />
     </application>
 
 </manifest>
