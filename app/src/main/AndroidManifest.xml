@@ -59,6 +59,7 @@
         <activity android:name=".shape.MagnifierActivity"/>
         <activity android:name=".bitmap.WaterMarkActivity" />
         <activity android:name=".surfaceview.SurfaceViewActivity" />
+        <activity android:name=".recyclerview.DragRecyclerActivity"/>
     </application>
 
 </manifest>

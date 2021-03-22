@@ -70,6 +70,10 @@ public class RecyclerMainActivity extends BaseActivity {
                         intent.setClass(mContext, TkrefreshActivity.class);
                         startActivity(intent);
                         break;
+                    case 4:
+                        intent.setClass(mContext, DragRecyclerActivity.class);
+                        startActivity(intent);
+                        break;
                 }
             }
         });
@@ -96,6 +100,11 @@ public class RecyclerMainActivity extends BaseActivity {
         homeBean3.setTitle("RecyclerView With Tkrefresh");
         homeBean3.setContent("RecyclerView With Tkrefresh");
         recyclerList.add(homeBean3);
+
+        HomeBean homeBean4 = new HomeBean();
+        homeBean4.setTitle("可拖拽RecyclerView");
+        homeBean4.setContent("可拖拽RecyclerView");
+        recyclerList.add(homeBean4);
     }
 
     public class RecyclerAdapter extends BaseQuickAdapter<HomeBean, BaseViewHolder>{
